@@ -1,5 +1,6 @@
 package com.tyss;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.Test;
@@ -18,6 +19,10 @@ public class Demo1 {
 		String title=driver.getTitle();
 		
 		System.out.println("Title of the page is :"+title);
+		
+		driver.findElement(By.xpath("//a[.='Documentation']")).click();
+		
+		System.out.println("Title of Documentation is : "+driver.getTitle());
 		
 		driver.close();
 	}
